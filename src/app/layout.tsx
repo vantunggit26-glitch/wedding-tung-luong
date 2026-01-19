@@ -27,6 +27,25 @@ const crimson = Crimson_Text({
 export const metadata: Metadata = {
   title: "Thiệp Mời Đám Cưới",
   description: "Trang thiệp mời đám cưới được tạo bằng Next.js + Tailwind",
+  openGraph: {
+    title: "Thiệp Mời Đám Cưới",
+    description: "Trang thiệp mời đám cưới được tạo bằng Next.js + Tailwind",
+    images: [
+      {
+        url: "/image_wedding/LIU_4701.JPG",
+        width: 1200,
+        height: 630,
+        alt: "Wedding Photo Preview",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thiệp Mời Đám Cưới",
+    description: "Trang thiệp mời đám cưới được tạo bằng Next.js + Tailwind",
+    images: ["/image_wedding/LIU_4701.JPG"],
+  },
 };
 
 export default function RootLayout({

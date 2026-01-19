@@ -1,12 +1,12 @@
 export default function WeddingPhoto() {
   return (
-    <div className="mt-8 rounded-lg overflow-hidden shadow-2xl">
-      <div className="relative h-[400px] md:h-[600px] bg-gradient-to-b from-gray-200 to-gray-300">
+    <div className="mt-8 rounded-lg overflow-hidden shadow-2xl flex justify-center">
+      <div className="relative w-full max-w-2xl h-[400px] md:h-[600px] bg-gradient-to-b from-gray-200 to-gray-300">
         {/* Wedding Image */}
         <img 
           src="/image_wedding/LIU_4701.JPG" 
           alt="Wedding Photo"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover mx-auto"
           onError={(e) => {
             // Show placeholder if image fails to load
             e.currentTarget.style.display = 'none';
