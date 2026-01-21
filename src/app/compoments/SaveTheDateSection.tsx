@@ -80,11 +80,11 @@ export default function SaveTheDateSection({ eventDate }: SaveTheDateSectionProp
                 </div>
               </div>
               {/* Uncomment when you have the image */}
-              {/* <img 
-                src="/images/save-date.jpg" 
+              <img 
+                src="/image_wedding/LIU_6428.JPG" 
                 alt="Save The Date"
                 className="w-full h-full object-cover"
-              /> */}
+              />
 
               {/* Calendar overlay on photo */}
               <div className="absolute inset-0 bg-black/20 flex items-center justify-center">

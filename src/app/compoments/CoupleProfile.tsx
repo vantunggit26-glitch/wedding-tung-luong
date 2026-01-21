@@ -39,15 +39,15 @@ export default function CoupleProfile() {
                   <p className="text-xs mt-2">Ảnh chú rể</p>
                 </div>
               </div>
-              {/* Uncomment when you have the image */}
-              {/* <img 
-                src="/images/groom.jpg" 
-                alt="Minh Trung"
-                className="w-full h-full object-cover"
-              /> */}
+              <img 
+                src="/image_wedding/LIU_5412.JPG" 
+                alt="Văn Tùng"
+                className="w-full h-full object-cover scale-150"
+                style={{objectPosition: '50% 10%'}}
+              />
             </div>
             <h3 className="font-serif text-2xl md:text-3xl text-[#c9a87b]">
-              Minh Trung
+              Văn Tùng
             </h3>
           </div>
 
@@ -73,15 +73,15 @@ export default function CoupleProfile() {
                   <p className="text-xs mt-2">Ảnh cô dâu</p>
                 </div>
               </div>
-              {/* Uncomment when you have the image */}
-              {/* <img 
-                src="/images/bride.jpg" 
-                alt="Thanh Thủy"
-                className="w-full h-full object-cover"
-              /> */}
+              <img 
+                src="/image_wedding/LIU_5169.JPG" 
+                alt="Lương Lương"
+                className="w-full h-full object-cover scale-260"
+                style={{objectPosition: '80% 0%'}}
+              />
             </div>
             <h3 className="font-serif text-2xl md:text-3xl text-[#c9a87b]">
-              Thanh Thủy
+              Lương Lương
             </h3>
           </div>
         </div>

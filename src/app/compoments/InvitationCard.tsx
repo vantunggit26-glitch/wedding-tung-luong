@@ -79,26 +79,26 @@ export default function InvitationCard({
         <div className="w-full mb-4">
           {/* Top text row */}
           <div className="flex justify-between items-center mb-8">
-            <span className="text-[#8b7355] text-sm md:text-base font-montserrat tracking-widest uppercase">You are</span>
-            <span className="text-[#c9a87b] text-sm md:text-base font-montserrat tracking-widest uppercase">The Love of</span>
-            <span className="text-[#8b7355] text-sm md:text-base font-montserrat tracking-widest uppercase">My Life</span>
+            <span className="text-[#8b7355] text-sm md:text-base font-montserrat tracking-widest uppercase animate-slideInLeft" style={{animationDelay: '0.2s'}}>You are</span>
+            <span className="text-[#c9a87b] text-sm md:text-base font-montserrat tracking-widest uppercase animate-fadeIn" style={{animationDelay: '0.4s'}}>The Love of</span>
+            <span className="text-[#8b7355] text-sm md:text-base font-montserrat tracking-widest uppercase animate-slideInRight" style={{animationDelay: '0.6s'}}>My Life</span>
           </div>
           
           {/* Main title */}
           <div className="mb-8">
-            <h1 className="font-serif font-medium text-6xl md:text-7xl text-[#8b7355] mb-6 tracking-wide">
+            <h1 className="font-serif font-medium text-6xl md:text-7xl text-[#8b7355] mb-6 tracking-wide animate-scaleIn" style={{animationDelay: '0.8s'}}>
               Thiệp mời
             </h1>
           </div>
           
           {/* Subtitle */}
-          <div className="text-[#8b7355] text-sm md:text-base tracking-[0.3em] uppercase font-light">
+          <div className="text-[#8b7355] text-sm md:text-base tracking-[0.3em] uppercase font-light animate-slideInTop" style={{animationDelay: '1s'}}>
               CHẠM ĐỂ MỞ THIỆP
             </div>
         </div>
 
         {/* Couple names */}
-        <div className="font-serif text-xl md:text-2xl text-[#8b7355] tracking-wide mb-8 mt-4"  >
+        <div className="font-serif text-xl md:text-2xl text-[#8b7355] tracking-wide mb-8 mt-4 animate-fadeIn" style={{animationDelay: '1.2s'}}>
           {groomName}{brideName}
         </div>
 

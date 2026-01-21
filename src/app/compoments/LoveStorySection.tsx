@@ -5,10 +5,10 @@ export default function LoveStorySection() {
         {/* Top Quote */}
         <div className="text-center py-8 px-4">
           <p className="text-[#8b7355] text-base md:text-lg leading-relaxed">
-            Có lẽ thế gian này có và vẫn điều tươi đẹp
+            Có lẽ thế gian này có vô vàn điều tươi đẹp, 
           </p>
           <p className="text-[#c9a87b] text-base md:text-lg leading-relaxed font-semibold">
-            Nằm trong tầng em, điệu nhật vẫn của cô anh
+            Nhưng trong lòng em, đẹp nhất vẫn chỉ có anh
           </p>
         </div>
 
@@ -47,43 +47,23 @@ export default function LoveStorySection() {
                       d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                     />
                   </svg>
-                  <p className="text-sm mt-2">Ảnh cặp đôi trên biển</p>
-                  <p className="text-xs">(/public/images/beach-photo.jpg)</p>
+                  <p className="text-sm mt-2"></p>
+                  <p className="text-xs">()</p>
                 </div>
               </div>
-              {/* Uncomment when you have the image */}
-              {/* <img 
-                src="/images/beach-photo.jpg" 
+              <img 
+                src="/image_wedding/LIU_6110.JPG" 
                 alt="My Love Forever"
                 className="w-full h-full object-cover"
-              /> */}
+              />
 
               {/* Overlay smaller photo at bottom left */}
-              <div className="absolute bottom-4 left-4 w-32 h-40 md:w-40 md:h-48 bg-white p-2 shadow-xl rounded-lg">
-                <div className="w-full h-full bg-gray-300 rounded flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <svg
-                      className="w-8 h-8 mx-auto opacity-30"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-                    <p className="text-[8px] mt-1">Ảnh nhỏ</p>
-                  </div>
-                </div>
-                {/* Uncomment when you have the image */}
-                {/* <img 
-                  src="/images/couple-small.jpg" 
+              <div className="absolute bottom-4 left-4 w-32 h-40 md:w-40 md:h-48 bg-white p-2 shadow-xl rounded-lg overflow-hidden">
+                <img 
+                  src="/image_wedding/LIU_6075.JPG" 
                   alt="Couple"
                   className="w-full h-full object-cover rounded"
-                /> */}
+                />
               </div>
             </div>
           </div>
@@ -107,6 +87,24 @@ export default function LoveStorySection() {
           <p className="text-[#8b7355] text-sm md:text-base leading-relaxed">
             Để mọi thứ trở nên bất biến
           </p>
+        </div>
+
+        {/* Gallery Grid - 2 more photos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-8 md:px-20 pb-8">
+          <div className="relative bg-gray-200 aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <img 
+              src="/image_wedding/LIU_5850.JPG" 
+              alt="Love Story"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="relative bg-gray-200 aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <img 
+              src="/image_wedding/LIU_6305.JPG" 
+              alt="Love Story"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
 
