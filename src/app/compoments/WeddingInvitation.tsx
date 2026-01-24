@@ -12,7 +12,7 @@ import SaveTheDateSection from "./SaveTheDateSection";
 
 export default function WeddingInvitation() {
   // Thông tin sự kiện (bạn có thể thay đổi)
-  const eventDate = new Date("2025-10-25T16:00:00");
+  const eventDate = new Date("2026-03-07T16:00:00");
   const groomName = "";
   const brideName = "";
 

@@ -1,6 +1,7 @@
 'use client';
 
 import AnimatedSection from './AnimatedSection';
+import OptimizedImage from './OptimizedImage';
 
 export default function WeddingPhoto() {
   return (
@@ -8,11 +9,14 @@ export default function WeddingPhoto() {
       <div className="mt-8 rounded-lg overflow-hidden shadow-2xl flex justify-center">
         <div className="relative w-full max-w-2xl h-[400px] md:h-[600px] bg-gradient-to-b from-gray-200 to-gray-300">
         {/* Wedding Image */}
-        <img 
+        <OptimizedImage
           src="/image_wedding/LIU_5447.jpg" 
           alt="Wedding Photo"
-          className="w-full h-full object-cover mx-auto"
-          onError={(e) => {
+          fill
+          className="object-cover mx-auto"
+          sizes="(max-width: 768px) 100vw, 672px"
+          priority
+          onError={(e: any) => {
             // Show placeholder if image fails to load
             e.currentTarget.style.display = 'none';
             e.currentTarget.nextElementSibling?.classList.remove('hidden');

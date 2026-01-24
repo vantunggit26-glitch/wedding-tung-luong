@@ -1,6 +1,7 @@
 'use client';
 
 import AnimatedSection from './AnimatedSection';
+import OptimizedImage from './OptimizedImage';
 
 interface SaveTheDateSectionProps {
   eventDate: Date;
@@ -89,10 +90,13 @@ export default function SaveTheDateSection({ eventDate }: SaveTheDateSectionProp
                 </div>
               </div>
               {/* Uncomment when you have the image */}
-              <img 
-                src="/image_wedding/LIU_6305.jpg" 
+              <OptimizedImage
+                src="/image_wedding/LIU_4865.jpg" 
                 alt="Save The Date"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 600px"
+                priority
               />
 
               {/* Calendar overlay on photo */}
@@ -135,7 +139,7 @@ export default function SaveTheDateSection({ eventDate }: SaveTheDateSectionProp
                   {dayOfWeek}, {dateStr}
                 </p>
                 <p className="text-[#c9a87b] text-base md:text-lg">
-                  Âm lịch 22/4 | {timeStr.toUpperCase()}
+                  Âm lịch 18/01/2026 | {timeStr.toUpperCase()}
                 </p>
               </div>
             </AnimatedSection>

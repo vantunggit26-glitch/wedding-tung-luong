@@ -1,6 +1,7 @@
 'use client';
 
 import AnimatedSection from './AnimatedSection';
+import OptimizedImage from './OptimizedImage';
 
 export default function LoveStorySection() {
   return (
@@ -58,18 +59,23 @@ export default function LoveStorySection() {
                     <p className="text-xs">()</p>
                   </div>
                 </div>
-                <img 
+                <OptimizedImage
                   src="/image_wedding/LIU_6110.jpg" 
                   alt="My Love Forever"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  priority
                 />
 
                 {/* Overlay smaller photo at bottom left */}
                 <div className="absolute bottom-4 left-4 w-32 h-40 md:w-40 md:h-48 bg-white p-2 shadow-xl rounded-lg overflow-hidden">
-                  <img 
+                  <OptimizedImage
                     src="/image_wedding/LIU_6075.jpg" 
                     alt="Couple"
-                    className="w-full h-full object-cover rounded"
+                    fill
+                    className="object-cover rounded"
+                    sizes="(max-width: 768px) 128px, 160px"
                   />
                 </div>
               </div>
@@ -105,19 +111,23 @@ export default function LoveStorySection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-8 md:px-20 pb-8">
           <AnimatedSection direction="left" delay={0.5}>
             <div className="relative bg-gray-200 aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
-              <img 
+              <OptimizedImage
                 src="/image_wedding/LIU_5850.jpg" 
                 alt="Love Story"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </AnimatedSection>
           <AnimatedSection direction="right" delay={0.5}>
             <div className="relative bg-gray-200 aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
-              <img 
+              <OptimizedImage
                 src="/image_wedding/LIU_6305.jpg" 
                 alt="Love Story"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </AnimatedSection>

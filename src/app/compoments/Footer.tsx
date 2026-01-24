@@ -1,5 +1,7 @@
 "use client";
 
+import OptimizedImage from './OptimizedImage';
+
 export default function Footer() {
   return (
     <footer className="w-full py-12 px-4 md:px-8 bg-white/40 backdrop-blur-sm">
@@ -8,13 +10,15 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center">
           {/* Wedding Couple Image */}
           <div className="flex justify-center mb-8">
-            <img 
+            <OptimizedImage
               src="/images/wedding_img.png" 
               alt="Wedding Couple"
+              width={224}
+              height={224}
               className="w-40 h-40 md:w-56 md:h-56 object-contain select-none"
-              draggable="false"
-              onContextMenu={(e) => e.preventDefault()}
-              onError={(e) => {
+              draggable={false}
+              onContextMenu={(e: any) => e.preventDefault()}
+              onError={(e: any) => {
                 // Fallback to SVG if image not found
                 e.currentTarget.style.display = 'none';
                 const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");

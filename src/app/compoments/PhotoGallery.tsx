@@ -1,6 +1,7 @@
 'use client';
 
 import AnimatedSection from './AnimatedSection';
+import OptimizedImage from './OptimizedImage';
 
 export default function PhotoGallery() {
   const photos = [
@@ -28,10 +29,12 @@ export default function PhotoGallery() {
               delay={index * 0.1}
             >
               <div className="relative aspect-square bg-gray-200 rounded-lg overflow-hidden shadow-lg group">
-                <img 
+                <OptimizedImage
                   src={photo.src}
                   alt={`Our moment ${photo.id}`}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                 />
               </div>
             </AnimatedSection>

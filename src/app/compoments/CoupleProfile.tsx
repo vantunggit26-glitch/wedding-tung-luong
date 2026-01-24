@@ -1,6 +1,7 @@
 'use client';
 
 import AnimatedSection from './AnimatedSection';
+import OptimizedImage from './OptimizedImage';
 
 export default function CoupleProfile() {
   return (
@@ -48,11 +49,13 @@ export default function CoupleProfile() {
                   <p className="text-xs mt-2">Ảnh chú rể</p>
                 </div>
               </div>
-              <img 
+              <OptimizedImage
                 src="/image_wedding/LIU_5412.jpg" 
                 alt="Văn Tùng"
-                className="w-full h-full object-cover scale-150"
+                fill
+                className="object-cover scale-150"
                 style={{objectPosition: '50% 10%'}}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <h3 className="font-serif text-2xl md:text-3xl text-[#c9a87b]">
@@ -84,11 +87,13 @@ export default function CoupleProfile() {
                   <p className="text-xs mt-2">Ảnh cô dâu</p>
                 </div>
               </div>
-              <img 
+              <OptimizedImage
                 src="/image_wedding/LIU_5169.jpg" 
                 alt="Lương Lương"
-                className="w-full h-full object-cover scale-260"
+                fill
+                className="object-cover scale-260"
                 style={{objectPosition: '80% 0%'}}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <h3 className="font-serif text-2xl md:text-3xl text-[#c9a87b]">

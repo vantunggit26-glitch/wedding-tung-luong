@@ -2,6 +2,7 @@
 
 import { Music, Pause, Play, SkipBack, SkipForward, Volume2, List, X } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import OptimizedImage from "./OptimizedImage";
 
 interface Song {
   id: number;
@@ -13,14 +14,6 @@ interface Song {
 }
 
 export default function MusicPlayer() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [showPlaylist, setShowPlaylist] = useState(false);
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [volume, setVolume] = useState(70);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
   // Sample playlist data
   const playlist: Song[] = [
     {
@@ -49,7 +42,29 @@ export default function MusicPlayer() {
     }
   ];
 
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showPlaylist, setShowPlaylist] = useState(false);
+  const [currentSongIndex, setCurrentSongIndex] = useState(playlist.length - 1); // Bắt đầu từ bài cuối
+  const [volume, setVolume] = useState(70);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
   const currentSong = playlist[currentSongIndex];
+
+  // Auto play last song on mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (audioRef.current) {
+        audioRef.current.play().catch(err => {
+          console.log("Auto-play failed:", err);
+        });
+        setIsPlaying(true);
+      }
+    }, 1000); // Delay 1s để đảm bảo component đã render xong
+    
+    return () => clearTimeout(timer);
+  }, []); // Chỉ chạy 1 lần khi mount
 
   useEffect(() => {
     if (audioRef.current) {
@@ -175,10 +190,12 @@ export default function MusicPlayer() {
             <div className="bg-gradient-to-b from-gray-50 to-white p-6 border-b border-gray-200">
               <div className="flex items-start gap-4">
                 <div className="relative w-20 h-20 rounded-lg overflow-hidden shadow-lg flex-shrink-0">
-                  <img
+                  <OptimizedImage
                     src={currentSong.coverImage}
                     alt={currentSong.title}
-                    className="w-full h-full object-cover"
+                    width={80}
+                    height={80}
+                    className="object-cover"
                   />
                   {isPlaying && (
                     <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -264,10 +281,12 @@ export default function MusicPlayer() {
                       }`}
                     >
                       <div className="relative w-12 h-12 rounded overflow-hidden flex-shrink-0">
-                        <img
+                        <OptimizedImage
                           src={song.coverImage}
                           alt={song.title}
-                          className="w-full h-full object-cover"
+                          width={48}
+                          height={48}
+                          className="object-cover"
                         />
                         {index === currentSongIndex && isPlaying && (
                           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
