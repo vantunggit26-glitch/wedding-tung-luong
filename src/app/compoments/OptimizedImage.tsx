@@ -43,9 +43,9 @@ export default function OptimizedImage({
       width={width}
       height={height}
       fill={fill}
-      className={className}
+      className={`${className} transition-opacity duration-300`}
       style={style}
-      quality={60} // Giảm chất lượng từ 75 xuống 60 để giảm kích thước file
+      quality={40} // Giảm chất lượng xuống 40 để giảm mạnh kích thước file
       loading={priority ? 'eager' : 'lazy'} // Lazy load cho ảnh không quan trọng
       sizes={sizes || '100vw'} // Responsive sizes
       priority={priority}
@@ -53,6 +53,8 @@ export default function OptimizedImage({
       onContextMenu={onContextMenu}
       draggable={draggable}
       unoptimized={false}
+      placeholder="blur"
+      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
     />
   );
 }
