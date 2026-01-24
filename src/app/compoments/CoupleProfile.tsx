@@ -1,25 +1,34 @@
+'use client';
+
+import AnimatedSection from './AnimatedSection';
+
 export default function CoupleProfile() {
   return (
     <div className="bg-gradient-to-b from-[#f5f0ea] to-white rounded-lg shadow-2xl p-8 md:p-12 mt-8">
       <div className="text-center space-y-8">
         {/* Heart icon */}
-        <div className="flex justify-center">
-          <div className="w-8 h-8 bg-[#c9a87b] transform rotate-45 relative">
-            <div className="absolute -left-4 top-0 w-8 h-8 bg-[#c9a87b] rounded-full" />
-            <div className="absolute -top-4 left-0 w-8 h-8 bg-[#c9a87b] rounded-full" />
+        <AnimatedSection direction="down">
+          <div className="flex justify-center">
+            <div className="w-8 h-8 bg-[#c9a87b] transform rotate-45 relative">
+              <div className="absolute -left-4 top-0 w-8 h-8 bg-[#c9a87b] rounded-full" />
+              <div className="absolute -top-4 left-0 w-8 h-8 bg-[#c9a87b] rounded-full" />
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
 
         {/* Title */}
-        <h2 className="font-serif text-4xl md:text-5xl text-[#c9a87b] tracking-[0.3em]">
-          MY LOVER
-        </h2>
+        <AnimatedSection direction="up" delay={0.2}>
+          <h2 className="font-serif text-4xl md:text-5xl text-[#c9a87b] tracking-[0.3em]">
+            MY LOVER
+          </h2>
+        </AnimatedSection>
 
         {/* Couple Photos */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto mt-12">
           {/* Groom */}
-          <div className="space-y-4">
-            <div className="relative w-full aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden shadow-xl">
+          <AnimatedSection direction="left" delay={0.3}>
+            <div className="space-y-4">
+              <div className="relative w-full aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden shadow-xl">
               {/* Placeholder - Replace with actual groom photo */}
               <div className="absolute inset-0 flex items-center justify-center text-gray-400">
                 <div className="text-center">
@@ -50,9 +59,11 @@ export default function CoupleProfile() {
               Văn Tùng
             </h3>
           </div>
+          </AnimatedSection>
 
           {/* Bride */}
-          <div className="space-y-4">
+          <AnimatedSection direction="right" delay={0.3}>
+            <div className="space-y-4">
             <div className="relative w-full aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden shadow-xl">
               {/* Placeholder - Replace with actual bride photo */}
               <div className="absolute inset-0 flex items-center justify-center text-gray-400">
@@ -84,9 +95,11 @@ export default function CoupleProfile() {
               Lương Lương
             </h3>
           </div>
+          </AnimatedSection>
         </div>
 
         {/* Love Poem - Vietnamese */}
+        <AnimatedSection direction="up" delay={0.5}>
         <div className="mt-12 space-y-2 text-[#8b7355] max-w-2xl mx-auto">
           <p className="text-base md:text-lg leading-relaxed">
             Trái tim em,
@@ -111,6 +124,7 @@ export default function CoupleProfile() {
             its sky in your eye.
           </p>
         </div>
+        </AnimatedSection>
       </div>
     </div>
   );

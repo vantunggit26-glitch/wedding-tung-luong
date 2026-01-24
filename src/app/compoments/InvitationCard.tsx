@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Countdown from "./Countdown";
+import AnimatedSection from "./AnimatedSection";
 
 interface InvitationCardProps {
   groomName: string;
@@ -36,7 +37,8 @@ export default function InvitationCard({
 
   return (
     <>
-    <div className="bg-white rounded-lg shadow-2xl relative overflow-visible">
+    <AnimatedSection direction="up">
+      <div className="bg-white rounded-lg shadow-2xl relative overflow-visible">
       {/* Flower decoration - Top left - Yellow/orange flowers with green leaves */}
       <div className="absolute top-20 -left-16 md:top-12 md:-left-16 w-40 h-30 md:w-56 md:h-56 pointer-events-none z-50">
         <img 
@@ -376,11 +378,14 @@ export default function InvitationCard({
         }
       `}</style>
     </div>
+    </AnimatedSection>
 
     {/* Countdown Card - Separate independent section */}
-    <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12 text-center mt-8">
-      <Countdown targetDate={new Date('2026-03-08')} />
-    </div>
+    <AnimatedSection direction="up" delay={0.2}>
+      <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12 text-center mt-8">
+        <Countdown targetDate={new Date('2026-03-08')} />
+      </div>
+    </AnimatedSection>
     </>
   );
 }

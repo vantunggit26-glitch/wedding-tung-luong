@@ -1,7 +1,12 @@
+'use client';
+
+import AnimatedSection from './AnimatedSection';
+
 export default function WeddingPhoto() {
   return (
-    <div className="mt-8 rounded-lg overflow-hidden shadow-2xl flex justify-center">
-      <div className="relative w-full max-w-2xl h-[400px] md:h-[600px] bg-gradient-to-b from-gray-200 to-gray-300">
+    <AnimatedSection direction="up">
+      <div className="mt-8 rounded-lg overflow-hidden shadow-2xl flex justify-center">
+        <div className="relative w-full max-w-2xl h-[400px] md:h-[600px] bg-gradient-to-b from-gray-200 to-gray-300">
         {/* Wedding Image */}
         <img 
           src="/image_wedding/LIU_5447.JPG" 
@@ -41,7 +46,8 @@ export default function WeddingPhoto() {
             As the clouds and mist dissipate, I love you and everyone knows it
           </p>
         </div>
+        </div>
       </div>
-    </div>
+    </AnimatedSection>
   );
 }

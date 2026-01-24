@@ -1,3 +1,7 @@
+'use client';
+
+import AnimatedSection from './AnimatedSection';
+
 interface SaveTheDateSectionProps {
   eventDate: Date;
 }
@@ -40,23 +44,28 @@ export default function SaveTheDateSection({ eventDate }: SaveTheDateSectionProp
     <div className="bg-gradient-to-b from-[#f5f0ea] to-white rounded-lg shadow-2xl p-8 md:p-12 mt-8">
       <div className="text-center space-y-8">
         {/* Title */}
-        <h2 className="font-serif text-4xl md:text-5xl text-[#c9a87b] tracking-[0.2em]">
-          SAVE THE DATE
-        </h2>
+        <AnimatedSection direction="down">
+          <h2 className="font-serif text-4xl md:text-5xl text-[#c9a87b] tracking-[0.2em]">
+            SAVE THE DATE
+          </h2>
+        </AnimatedSection>
 
         {/* Quote */}
-        <div className="space-y-2 text-[#8b7355] max-w-xl mx-auto">
-          <p className="text-base md:text-lg leading-relaxed">
-            Dù một vòng lần rơi vẫn gặp anh,
-          </p>
-          <p className="text-base md:text-lg leading-relaxed">
-            Từ đó, thế gian bỗng hóa dịu dàng.
-          </p>
-        </div>
+        <AnimatedSection direction="up" delay={0.2}>
+          <div className="space-y-2 text-[#8b7355] max-w-xl mx-auto">
+            <p className="text-base md:text-lg leading-relaxed">
+              Dù một vòng lần rơi vẫn gặp anh,
+            </p>
+            <p className="text-base md:text-lg leading-relaxed">
+              Từ đó, thế gian bỗng hóa dịu dàng.
+            </p>
+          </div>
+        </AnimatedSection>
 
         {/* Calendar Photo Frame */}
-        <div className="max-w-md mx-auto">
-          <div className="bg-black p-4 md:p-6 rounded-lg shadow-2xl">
+        <AnimatedSection direction="up" delay={0.3}>
+          <div className="max-w-md mx-auto">
+            <div className="bg-black p-4 md:p-6 rounded-lg shadow-2xl">
             {/* Photo */}
             <div className="relative aspect-[3/4] bg-gray-200 rounded overflow-hidden mb-4">
               {/* Placeholder */}
@@ -120,16 +129,19 @@ export default function SaveTheDateSection({ eventDate }: SaveTheDateSectionProp
             </div>
 
             {/* Date Info */}
-            <div className="text-center space-y-1">
-              <p className="font-serif text-[#c9a87b] text-xl md:text-2xl">
-                {dayOfWeek}, {dateStr}
-              </p>
-              <p className="text-[#c9a87b] text-base md:text-lg">
-                Âm lịch 22/4 | {timeStr.toUpperCase()}
-              </p>
+            <AnimatedSection direction="up" delay={0.4}>
+              <div className="text-center space-y-1">
+                <p className="font-serif text-[#c9a87b] text-xl md:text-2xl">
+                  {dayOfWeek}, {dateStr}
+                </p>
+                <p className="text-[#c9a87b] text-base md:text-lg">
+                  Âm lịch 22/4 | {timeStr.toUpperCase()}
+                </p>
+              </div>
+            </AnimatedSection>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </div>
   );
