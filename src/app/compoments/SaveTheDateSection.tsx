@@ -91,7 +91,7 @@ export default function SaveTheDateSection({ eventDate }: SaveTheDateSectionProp
               </div>
               {/* Uncomment when you have the image */}
               <OptimizedImage
-                src="/image_wedding/LIU_4865.jpg" 
+                src="/image_wedding/LIU_4865.png" 
                 alt="Save The Date"
                 fill
                 className="object-cover"
