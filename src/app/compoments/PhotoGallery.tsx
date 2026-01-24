@@ -4,10 +4,10 @@ import AnimatedSection from './AnimatedSection';
 
 export default function PhotoGallery() {
   const photos = [
-    { id: 1, src: '/image_wedding/LIU_5016.JPG' },
-    { id: 2, src: '/image_wedding/LIU_5538.JPG' },
-    { id: 3, src: '/image_wedding/LIU_5746.JPG' },
-    { id: 4, src: '/image_wedding/LIU_5837.JPG' }
+    { id: 1, src: '/image_wedding/LIU_5016.jpg' },
+    { id: 2, src: '/image_wedding/LIU_5538.jpg' },
+    { id: 3, src: '/image_wedding/LIU_5860.jpg' },
+    { id: 4, src: '/image_wedding/LIU_5837.jpg' }
   ];
 
   return (

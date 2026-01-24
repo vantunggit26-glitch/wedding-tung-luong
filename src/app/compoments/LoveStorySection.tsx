@@ -59,7 +59,7 @@ export default function LoveStorySection() {
                   </div>
                 </div>
                 <img 
-                  src="/image_wedding/LIU_6110.JPG" 
+                  src="/image_wedding/LIU_6110.jpg" 
                   alt="My Love Forever"
                   className="w-full h-full object-cover"
                 />
@@ -67,7 +67,7 @@ export default function LoveStorySection() {
                 {/* Overlay smaller photo at bottom left */}
                 <div className="absolute bottom-4 left-4 w-32 h-40 md:w-40 md:h-48 bg-white p-2 shadow-xl rounded-lg overflow-hidden">
                   <img 
-                    src="/image_wedding/LIU_6075.JPG" 
+                    src="/image_wedding/LIU_6075.jpg" 
                     alt="Couple"
                     className="w-full h-full object-cover rounded"
                   />
@@ -106,7 +106,7 @@ export default function LoveStorySection() {
           <AnimatedSection direction="left" delay={0.5}>
             <div className="relative bg-gray-200 aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="/image_wedding/LIU_5850.JPG" 
+                src="/image_wedding/LIU_5850.jpg" 
                 alt="Love Story"
                 className="w-full h-full object-cover"
               />
@@ -115,7 +115,7 @@ export default function LoveStorySection() {
           <AnimatedSection direction="right" delay={0.5}>
             <div className="relative bg-gray-200 aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="/image_wedding/LIU_6305.JPG" 
+                src="/image_wedding/LIU_6305.jpg" 
                 alt="Love Story"
                 className="w-full h-full object-cover"
               />

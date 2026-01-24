@@ -49,7 +49,7 @@ export default function CoupleProfile() {
                 </div>
               </div>
               <img 
-                src="/image_wedding/LIU_5412.JPG" 
+                src="/image_wedding/LIU_5412.jpg" 
                 alt="Văn Tùng"
                 className="w-full h-full object-cover scale-150"
                 style={{objectPosition: '50% 10%'}}
@@ -85,7 +85,7 @@ export default function CoupleProfile() {
                 </div>
               </div>
               <img 
-                src="/image_wedding/LIU_5169.JPG" 
+                src="/image_wedding/LIU_5169.jpg" 
                 alt="Lương Lương"
                 className="w-full h-full object-cover scale-260"
                 style={{objectPosition: '80% 0%'}}

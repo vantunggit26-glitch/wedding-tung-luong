@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
     images: [
       {
-        url: "https://tung-luong-love.netlify.app/image_wedding/LIU_4701.JPG",
+        url: "https://tung-luong-love.netlify.app/image_wedding/LIU_4701.jpg",
         width: 1200,
         height: 630,
         alt: "Wedding Photo Preview",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Thiệp Mời Đám Cưới",
     description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
-    images: ["https://tung-luong-love.netlify.app/image_wedding/LIU_4701.JPG"],
+    images: ["https://tung-luong-love.netlify.app/image_wedding/LIU_4701.jpg"],
   },
 };
 
