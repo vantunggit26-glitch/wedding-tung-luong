@@ -10,7 +10,7 @@ export default function WeddingPhoto() {
         <div className="relative w-full max-w-2xl h-[400px] md:h-[600px] bg-gradient-to-b from-gray-200 to-gray-300">
         {/* Wedding Image */}
         <OptimizedImage
-          src="/image_wedding/LIU_5447.jpg" 
+          src="/image_wedding/LIU_5447.png" 
           alt="Wedding Photo"
           fill
           className="object-cover mx-auto"
@@ -40,7 +40,7 @@ export default function WeddingPhoto() {
               />
             </svg>
             <p className="text-sm">Thêm ảnh cưới của bạn vào đây</p>
-            <p className="text-xs">(Đặt ảnh vào /public/images/image_wedding/LIU_4701.jpg)</p>
+            <p className="text-xs">(Đặt ảnh vào /public/images/image_wedding/LIU_4701.png)</p>
           </div>
         </div>
         

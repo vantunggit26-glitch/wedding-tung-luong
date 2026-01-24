@@ -50,7 +50,7 @@ export default function CoupleProfile() {
                 </div>
               </div>
               <OptimizedImage
-                src="/image_wedding/LIU_5412.jpg" 
+                src="/image_wedding/LIU_5412.png" 
                 alt="Văn Tùng"
                 fill
                 className="object-cover scale-150"
@@ -88,7 +88,7 @@ export default function CoupleProfile() {
                 </div>
               </div>
               <OptimizedImage
-                src="/image_wedding/LIU_5169.jpg" 
+                src="/image_wedding/LIU_5169.png" 
                 alt="Lương Lương"
                 fill
                 className="object-cover scale-260"

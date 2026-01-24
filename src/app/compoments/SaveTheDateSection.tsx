@@ -86,7 +86,7 @@ export default function SaveTheDateSection({ eventDate }: SaveTheDateSectionProp
                     />
                   </svg>
                   <p className="text-sm mt-2">Ảnh save the date</p>
-                  <p className="text-xs">(/public/images/save-date.jpg)</p>
+                  <p className="text-xs">(/public/images/save-date.png)</p>
                 </div>
               </div>
               {/* Uncomment when you have the image */}

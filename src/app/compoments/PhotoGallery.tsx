@@ -5,10 +5,10 @@ import OptimizedImage from './OptimizedImage';
 
 export default function PhotoGallery() {
   const photos = [
-    { id: 1, src: '/image_wedding/LIU_5016.jpg' },
-    { id: 2, src: '/image_wedding/LIU_5538.jpg' },
-    { id: 3, src: '/image_wedding/LIU_5860.jpg' },
-    { id: 4, src: '/image_wedding/LIU_5837.jpg' }
+    { id: 1, src: '/image_wedding/LIU_5016.png' },
+    { id: 2, src: '/image_wedding/LIU_5538.png' },
+    { id: 3, src: '/image_wedding/LIU_5860.png' },
+    { id: 4, src: '/image_wedding/LIU_5837.png' }
   ];
 
   return (

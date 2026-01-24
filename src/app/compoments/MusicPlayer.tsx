@@ -21,7 +21,7 @@ export default function MusicPlayer() {
       title: "Dancing In The Dark",
       artist: "Unknown Artist",
       duration: "4:32",
-      coverImage: "/image_wedding/LIU_5016.JPG",
+      coverImage: "/image_wedding/LIU_5016.png",
       audioUrl: "/songs/Dancing_In_The_Dark.mp3"
     },
     {
@@ -29,7 +29,7 @@ export default function MusicPlayer() {
       title: "Lễ Đường",
       artist: "Unknown Artist",
       duration: "3:45",
-      coverImage: "/image_wedding/LIU_5538.JPG",
+      coverImage: "/image_wedding/LIU_5538.png",
       audioUrl: "/songs/Le_Duong.mp3"
     },
     {
@@ -37,7 +37,7 @@ export default function MusicPlayer() {
       title: "Vạn vật như muốn ta bên nhau",
       artist: "Unknown Artist",
       duration: "4:15",
-      coverImage: "/image_wedding/LIU_5447.JPG",
+      coverImage: "/image_wedding/LIU_5447.png",
       audioUrl: "/songs/van_vat_nhu_muon_ta_ben_nhau.mp3"
     }
   ];
