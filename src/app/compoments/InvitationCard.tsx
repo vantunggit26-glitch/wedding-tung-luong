@@ -42,13 +42,11 @@ export default function InvitationCard({
       <div className="bg-white rounded-lg shadow-2xl relative overflow-visible">
       {/* Flower decoration - Top left - Yellow/orange flowers with green leaves */}
       <div className="absolute top-20 -left-16 md:top-12 md:-left-16 w-40 h-30 md:w-56 md:h-56 pointer-events-none z-50">
-        <OptimizedImage
+        <img 
           src="/images/flower_1.png" 
           alt="Flower decoration"
-          width={224}
-          height={224}
           className="w-full h-full object-contain transform rotate-[35deg]"
-          onError={(e: any) => {
+          onError={(e) => {
             // Fallback to SVG if image not found
             e.currentTarget.style.display = 'none';
             e.currentTarget.nextElementSibling?.classList.remove('hidden');

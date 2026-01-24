@@ -47,13 +47,12 @@ export default function OptimizedImage({
       style={style}
       quality={60} // Giảm chất lượng từ 75 xuống 60 để giảm kích thước file
       loading={priority ? 'eager' : 'lazy'} // Lazy load cho ảnh không quan trọng
-      placeholder="blur" // Hiển thị blur trong khi load
-      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAAf/2Q==" // Base64 placeholder nhỏ
       sizes={sizes || '100vw'} // Responsive sizes
       priority={priority}
       onError={onError}
       onContextMenu={onContextMenu}
       draggable={draggable}
+      unoptimized={false}
     />
   );
 }

@@ -174,7 +174,7 @@ export default function MusicPlayer() {
             <div className="bg-gradient-to-r from-[#c9a87b] to-[#b89968] p-6 text-white">
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-2xl font-bold font-serif">Wedding Playlist</h2>
+                  <h2 className="text-2xl font-bold font-serif">Wedding Playlist Van Tung</h2>
                   <p className="text-sm opacity-90 mt-1">{playlist.length} bài hát</p>
                 </div>
                 <button
