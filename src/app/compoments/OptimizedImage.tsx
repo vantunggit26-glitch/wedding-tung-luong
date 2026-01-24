@@ -45,14 +45,13 @@ export default function OptimizedImage({
       fill={fill}
       className={`${className} transition-opacity duration-300`}
       style={style}
-      quality={40} // Giảm chất lượng xuống 40 để giảm mạnh kích thước file
-      loading={priority ? 'eager' : 'lazy'} // Lazy load cho ảnh không quan trọng
-      sizes={sizes || '100vw'} // Responsive sizes
+      quality={30} // Giảm chất lượng xuống 30% để tối ưu tốc độ tải
+      loading={priority ? 'eager' : 'lazy'}
+      sizes={sizes || '100vw'}
       priority={priority}
       onError={onError}
       onContextMenu={onContextMenu}
       draggable={draggable}
-      unoptimized={false}
       placeholder="blur"
       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
     />
