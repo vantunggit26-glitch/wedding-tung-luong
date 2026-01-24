@@ -25,8 +25,17 @@ const crimson = Crimson_Text({
 });
 
 export const metadata: Metadata = {
-  title: "Thiệp Mời Đám Cưới",
+  title: "Thiệp Mời Đám Cưới - Tùng & Lương",
   description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: "Thiệp Mời Đám Cưới",
     description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",

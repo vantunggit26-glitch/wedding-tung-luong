@@ -18,6 +18,16 @@ export default function InvitationCard({
 }: InvitationCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [guestName, setGuestName] = useState("Tên khách mời");
+
+  // Đọc tên khách từ URL query parameter
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const toParam = params.get('to');
+    if (toParam) {
+      setGuestName(decodeURIComponent(toParam));
+    }
+  }, []);
 
   // Carousel images - Add your images to /public/images/
   const carouselImages: any[] = [
@@ -290,7 +300,7 @@ export default function InvitationCard({
 
             {/* Tên khách mời */}
             <div className="font-serif font-medium text-3xl md:text-4xl text-[#c9a87b] my-6">
-              Tên khách mời
+              {guestName}
             </div>
 
             {/* Invitation text */}
