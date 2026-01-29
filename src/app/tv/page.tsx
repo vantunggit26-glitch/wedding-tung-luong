@@ -162,6 +162,11 @@ export default function TVBanner() {
               <h3 className="font-serif text-4xl text-[#c9a87b] tracking-[0.2em]">
                 LỄ HỎI DÂU
               </h3>
+              
+              {/* Tên cô dâu chú rể */}
+              <div className="text-2xl font-medium text-[#c9a87b]">
+                Văn Tùng <span className="text-red-500">❤️</span> Lương Lương
+              </div>
 
               {/* Quote */}
               <div className="text-[#8b7355] text-lg">
@@ -214,9 +219,6 @@ export default function TVBanner() {
                   </p>
                   <p className="text-[#c9a87b] text-lg">
                     {weddingInfo.lunarDate}
-                  </p>
-                  <p className="text-[#c9a87b] text-xl font-bold mt-2">
-                    {weddingInfo.time}
                   </p>
                 </div>
               </div>
