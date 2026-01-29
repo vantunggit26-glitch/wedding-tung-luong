@@ -37,23 +37,26 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Thiệp Mời Đám Cưới",
+    title: "Thiệp Mời Đám Cưới - Tùng & Lương",
     description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
+    url: "https://wedding-tung-luong.vercel.app",
+    siteName: "Thiệp Mời Đám Cưới",
     images: [
       {
-        url: "https://tung-luong-love.netlify.app/image_wedding/LIU_4701.png",
+        url: "https://wedding-tung-luong.vercel.app/image_wedding/LIU_5447.png",
         width: 1200,
         height: 630,
-        alt: "Wedding Photo Preview",
+        alt: "Thiệp Mời Đám Cưới Tùng & Lương",
       },
     ],
+    locale: "vi_VN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thiệp Mời Đám Cưới",
+    title: "Thiệp Mời Đám Cưới - Tùng & Lương",
     description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
-    images: ["https://tung-luong-love.netlify.app/image_wedding/LIU_4701.png"],
+    images: ["https://wedding-tung-luong.vercel.app/image_wedding/LIU_5447.png"],
   },
 };
 
