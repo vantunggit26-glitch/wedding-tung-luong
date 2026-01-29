@@ -144,7 +144,7 @@ export default function TVBanner() {
           {/* ===== CỘT TRÁI: ẢNH CƯỚI FULL ===== */}
           <div 
             style={{ width: '50%', height: '824px' }} 
-            className="relative rounded-2xl overflow-hidden border-4 border-yellow-400 flex-shrink-0 cursor-pointer"
+            className="relative rounded-2xl overflow-hidden flex-shrink-0 cursor-pointer"
             onDoubleClick={toggleFullscreen}
             title="Double-click để phóng to/thu nhỏ màn hình"
           >
@@ -156,7 +156,7 @@ export default function TVBanner() {
           </div>
 
           {/* ===== CỘT PHẢI: SAVE THE DATE (Full height 800px) ===== */}
-          <div style={{ width: '50%', height: '824px' }} className="bg-gradient-to-b from-[#f5f0ea] to-white rounded-2xl border-4 border-[#c9a87b] flex flex-col justify-center items-center p-8 flex-shrink-0">
+          <div style={{ width: '50%', height: '824px' }} className="bg-gradient-to-b from-[#f5f0ea] to-white rounded-2xl flex flex-col justify-center items-center p-8 flex-shrink-0">
             <div className="text-center space-y-8">
               {/* Header */}
               <h3 className="font-serif text-4xl text-[#c9a87b] tracking-[0.2em]">
