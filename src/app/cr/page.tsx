@@ -1,6 +1,31 @@
+import type { Metadata } from "next";
 import MusicPlayer from "../compoments/MusicPlayer";
 import WeddingInvitation from "../compoments/WeddingInvitation";
 import Footer from "../compoments/Footer";
+
+export const metadata: Metadata = {
+  title: "Thiệp Mời Đám Cưới - Tùng & Lương (Nhà Trai)",
+  description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
+  openGraph: {
+    title: "Thiệp Mời Đám Cưới - Tùng & Lương",
+    description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
+    url: "/cr",
+    images: [
+      {
+        url: "/image_wedding/LIU_5447.png",
+        width: 1200,
+        height: 630,
+        alt: "Thiệp Mời Đám Cưới Tùng & Lương",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thiệp Mời Đám Cưới - Tùng & Lương",
+    description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
+    images: ["/image_wedding/LIU_5447.png"],
+  },
+};
 
 export default function GroomPage() {
   return (

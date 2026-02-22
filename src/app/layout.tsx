@@ -25,6 +25,7 @@ const crimson = Crimson_Text({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://wedding-tung-luong.vercel.app'),
   title: "Thiệp Mời Đám Cưới - Tùng & Lương",
   description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
   icons: {
@@ -39,11 +40,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Thiệp Mời Đám Cưới - Tùng & Lương",
     description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
-    url: "https://wedding-tung-luong.vercel.app",
+    url: "/",
     siteName: "Thiệp Mời Đám Cưới",
     images: [
       {
-        url: "https://wedding-tung-luong.vercel.app/image_wedding/LIU_5447.png",
+        url: "/image_wedding/LIU_5447.png",
         width: 1200,
         height: 630,
         alt: "Thiệp Mời Đám Cưới Tùng & Lương",
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Thiệp Mời Đám Cưới - Tùng & Lương",
     description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
-    images: ["https://wedding-tung-luong.vercel.app/image_wedding/LIU_5447.png"],
+    images: ["/image_wedding/LIU_5447.png"],
   },
 };
 
