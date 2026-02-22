@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Thiệp Mời Đám Cưới",
     images: [
       {
-        url: "/image_wedding/LIU_5447.png",
+        url: "/background/LIU_5447.png",
         width: 1200,
         height: 630,
         alt: "Thiệp Mời Đám Cưới Tùng & Lương",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Thiệp Mời Đám Cưới - Tùng & Lương",
     description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
-    images: ["/image_wedding/LIU_5447.png"],
+    images: ["/background/LIU_5447.png"],
   },
 };
 
@@ -71,7 +71,7 @@ export default function RootLayout({
       <head>
         <meta property="og:title" content="Thiệp Mời Đám Cưới - Tùng & Lương" />
         <meta property="og:description" content="Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại" />
-        <meta property="og:image" content="https://wedding-tung-luong.vercel.app/image_wedding/LIU_5447.png" />
+        <meta property="og:image" content="https://wedding-tung-luong.vercel.app/background/LIU_5447.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://wedding-tung-luong.vercel.app" />
@@ -81,7 +81,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Thiệp Mời Đám Cưới - Tùng & Lương" />
         <meta name="twitter:description" content="Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại" />
-        <meta name="twitter:image" content="https://wedding-tung-luong.vercel.app/image_wedding/LIU_5447.png" />
+        <meta name="twitter:image" content="https://wedding-tung-luong.vercel.app/background/LIU_5447.png" />
       </head>
       <body className={`${montserrat.variable} ${playfair.variable} ${crimson.variable} font-sans antialiased`}>
         {children}

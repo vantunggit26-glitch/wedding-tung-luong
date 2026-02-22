@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: "/cr",
     images: [
       {
-        url: "/image_wedding/LIU_5447.png",
+        url: "/background/LIU_5447.png",
         width: 1200,
         height: 630,
         alt: "Thiệp Mời Đám Cưới Tùng & Lương",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Thiệp Mời Đám Cưới - Tùng & Lương",
     description: "Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại",
-    images: ["/image_wedding/LIU_5447.png"],
+    images: ["/background/LIU_5447.png"],
   },
 };
 
