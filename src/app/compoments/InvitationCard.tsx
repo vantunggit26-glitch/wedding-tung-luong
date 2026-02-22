@@ -140,8 +140,8 @@ export default function InvitationCard({
                   isOpen ? 'flap-open' : ''
                 }`}
                 style={{
-                  borderLeft: '144px solid transparent',
-                  borderRight: '144px solid transparent',
+                  borderLeft: '122px solid transparent',
+                  borderRight: '122px solid transparent',
                   borderTop: '96px solid #c9b8a0',
                   transformStyle: 'preserve-3d',
                   filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))'
