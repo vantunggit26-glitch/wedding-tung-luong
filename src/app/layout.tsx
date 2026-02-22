@@ -68,6 +68,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
+      <head>
+        <meta property="og:title" content="Thiệp Mời Đám Cưới - Tùng & Lương" />
+        <meta property="og:description" content="Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại" />
+        <meta property="og:image" content="https://wedding-tung-luong.vercel.app/image_wedding/LIU_5447.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://wedding-tung-luong.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="vi_VN" />
+        <meta property="og:site_name" content="Thiệp Mời Đám Cưới" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Thiệp Mời Đám Cưới - Tùng & Lương" />
+        <meta name="twitter:description" content="Cùng chúng tôi chia sẻ niềm vui trong ngày trọng đại" />
+        <meta name="twitter:image" content="https://wedding-tung-luong.vercel.app/image_wedding/LIU_5447.png" />
+      </head>
       <body className={`${montserrat.variable} ${playfair.variable} ${crimson.variable} font-sans antialiased`}>
         {children}
       </body>
