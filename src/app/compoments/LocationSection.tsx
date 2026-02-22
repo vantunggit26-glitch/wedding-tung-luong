@@ -1,8 +1,28 @@
 'use client';
 
 import AnimatedSection from './AnimatedSection';
+import dynamic from 'next/dynamic';
 
-export default function LocationSection() {
+// Dynamically import GoogleMapLocation to avoid SSR issues with Leaflet
+const GoogleMapLocation = dynamic(() => import('./GoogleMapLocation'), {
+  ssr: false,
+  loading: () => <div className="w-full h-[400px] md:h-[400px] bg-gray-100 rounded-lg animate-pulse" />
+});
+
+interface LocationSectionProps {
+  title: string;
+  address: string;
+  mapUrl: string;
+  lat: number;
+  lng: number;
+  locationName: string;
+}
+
+export default function LocationSection({ title, address, mapUrl, lat, lng, locationName }: LocationSectionProps) {
+  const handleOpenDirections = () => {
+    window.open(mapUrl, '_blank');
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12 mt-8">
       <div className="text-center space-y-6">
@@ -15,19 +35,29 @@ export default function LocationSection() {
         
         <AnimatedSection direction="up" delay={0.1}>
           <h3 className="font-serif text-3xl md:text-4xl text-[#c9a87b] tracking-wide">
-            TƯ GIA NHÀ GÁI
+            {title}
           </h3>
         </AnimatedSection>
 
         <AnimatedSection direction="up" delay={0.2}>
           <p className="text-[#8b7355] text-base md:text-lg">
-            Số nhà 15, ngách 24, ngõ 302, đường Hồng Thái, xã Ô Diên
+            {address}
           </p>
+        </AnimatedSection>
+
+        {/* Map */}
+        <AnimatedSection direction="up" delay={0.25}>
+          <div className="my-6">
+            <GoogleMapLocation lat={lat} lng={lng} locationName={locationName} />
+          </div>
         </AnimatedSection>
 
         {/* Map Button */}
         <AnimatedSection direction="up" delay={0.3}>
-          <button className="bg-[#8b7355] hover:bg-[#6b5335] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
+          <button 
+            onClick={handleOpenDirections}
+            className="bg-[#8b7355] hover:bg-[#6b5335] text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+          >
             Xem đường đi
           </button>
         </AnimatedSection>
