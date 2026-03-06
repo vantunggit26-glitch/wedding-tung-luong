@@ -169,21 +169,21 @@ export default function TVBanner() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-rose-100 via-pink-50 to-red-100 p-6 relative overflow-hidden">
+    <div className="h-screen w-full bg-white relative overflow-hidden">
       {/* Animation hoa rơi */}
       <FallingPetals />
       
-      <div className="w-full max-w-[1600px] mx-auto relative z-10">
+      <div className="w-full h-full mx-auto relative z-10">
         
         {/* Layout: Bên trái (Ảnh + Lời chúc) | Bên phải (Save The Date) */}
-        <div className="flex flex-row gap-6" style={{ display: 'flex' }}>
+        <div className="flex flex-row h-full" style={{ display: 'flex' }}>
           
           {/* ===== CỘT TRÁI: DANH SÁCH ẢNH CƯỚI (3 cột) ===== */}
           <div 
             ref={photoContainerRef}
             style={{ 
               width: '50%', 
-              height: '824px',
+              height: '100%',
               scrollbarWidth: 'none', // Firefox
               msOverflowStyle: 'none', // IE/Edge
             }} 
@@ -218,7 +218,7 @@ export default function TVBanner() {
           </div>
 
           {/* ===== CỘT PHẢI: SAVE THE DATE (Full height 800px) ===== */}
-          <div style={{ width: '50%', height: '824px' }} className="bg-gradient-to-b from-[#f5f0ea] to-white rounded-2xl flex flex-col justify-center items-center p-8 flex-shrink-0">
+          <div style={{ width: '50%', height: '100%' }} className="bg-gradient-to-b from-[#f5f0ea] to-white rounded-2xl flex flex-col justify-center items-center p-8 flex-shrink-0">
             <div className="text-center space-y-8">
               {/* Header */}
               <h3 className="font-serif text-4xl text-[#c9a87b] tracking-[0.2em]">
