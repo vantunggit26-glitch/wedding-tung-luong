@@ -104,7 +104,7 @@ const ImageItem = ({ src, index }: { src: string; index: number }) => {
   return (
     <div
       ref={imageRef}
-      className={`w-full mb-6 transition-all duration-700 ease-out ${
+      className={`transition-all duration-700 ease-out ${
         isVisible
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-20'
@@ -113,11 +113,11 @@ const ImageItem = ({ src, index }: { src: string; index: number }) => {
         transitionDelay: `${index * 50}ms`,
       }}
     >
-      <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300">
+      <div className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
         <img
           src={src}
           alt={`Wedding Photo ${index + 1}`}
-          className="w-full h-auto object-cover"
+          className="w-full h-full object-cover aspect-[3/4]"
           loading="lazy"
         />
       </div>
@@ -209,8 +209,8 @@ export default function TVBanner() {
           </div>
         </div>
 
-        {/* Gallery - Vertical scroll with animation */}
-        <div className="space-y-6">
+        {/* Gallery - Grid 3 columns with animation */}
+        <div className="grid grid-cols-3 gap-6">
           {images.map((image, index) => (
             <ImageItem key={image} src={image} index={index} />
           ))}
