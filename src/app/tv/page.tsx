@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 // Component hoa rơi
 const FallingPetals = () => {
@@ -70,8 +70,97 @@ const FallingPetals = () => {
   );
 };
 
+// Component cho mỗi ảnh với animation
+const ImageItem = ({ src, index }: { src: string; index: number }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px',
+      }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={imageRef}
+      className={`w-full mb-6 transition-all duration-700 ease-out ${
+        isVisible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-20'
+      }`}
+      style={{
+        transitionDelay: `${index * 50}ms`,
+      }}
+    >
+      <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300">
+        <img
+          src={src}
+          alt={`Wedding Photo ${index + 1}`}
+          className="w-full h-auto object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  );
+};
+
 export default function TVBanner() {
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // Danh sách 30 ảnh
+  const images = [
+    '/image_wedding/LIU_4701.png',
+    '/image_wedding/LIU_4830.png',
+    '/image_wedding/LIU_4865.png',
+    '/image_wedding/LIU_4944.png',
+    '/image_wedding/LIU_5016.png',
+    '/image_wedding/LIU_5023.png',
+    '/image_wedding/LIU_5169.png',
+    '/image_wedding/LIU_5303.png',
+    '/image_wedding/LIU_5412.png',
+    '/image_wedding/LIU_5428.png',
+    '/image_wedding/LIU_5447.png',
+    '/image_wedding/LIU_5495.png',
+    '/image_wedding/LIU_5538.png',
+    '/image_wedding/LIU_5743.png',
+    '/image_wedding/LIU_5751.png',
+    '/image_wedding/LIU_5768.png',
+    '/image_wedding/LIU_5775.png',
+    '/image_wedding/LIU_5837.png',
+    '/image_wedding/LIU_5841.png',
+    '/image_wedding/LIU_5850.png',
+    '/image_wedding/LIU_5860.png',
+    '/image_wedding/LIU_5932.png',
+    '/image_wedding/LIU_5990.png',
+    '/image_wedding/LIU_6016.png',
+    '/image_wedding/LIU_6075.png',
+    '/image_wedding/LIU_6110.png',
+    '/image_wedding/LIU_6305.png',
+    '/image_wedding/LIU_6369.png',
+    '/image_wedding/LIU_6533.png',
+    '/image_wedding/LIU_6537.png',
+  ];
 
   // Hàm toggle fullscreen khi double-click
   const toggleFullscreen = () => {
@@ -97,133 +186,44 @@ export default function TVBanner() {
     };
   }, []);
 
-  // Ngày lễ hỏi dâu: 30/01/2026
-  const eventDate = new Date(2026, 0, 30, 9, 0); // 30/01/2026, 9:00 AM
-  
-  // Thông tin lễ hỏi dâu
-  const weddingInfo = {
-    date: '30/01/2026',
-    dayOfWeek: 'Thứ Sáu',
-    lunarDate: 'Ngày 12 tháng 12 năm Ất Tỵ',
-    time: '10:00',
-  };
-
-  // Lời chúc
-  const wishes = [
-    'Trăm năm hạnh phúc',
-    'Vạn sự như ý',
-    'Sắt cầm hảo hợp',
-    'Bách niên giai lão',
-  ];
-
-  // Calendar cho tháng 1/2026
-  const day = eventDate.getDate(); // 30
-  const month = eventDate.getMonth(); // 0 (January)
-  const year = eventDate.getFullYear(); // 2026
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const firstDay = new Date(year, month, 1).getDay();
-  const calendarDays: (number | null)[] = [];
-
-  for (let i = 0; i < firstDay; i++) {
-    calendarDays.push(null);
-  }
-  for (let i = 1; i <= daysInMonth; i++) {
-    calendarDays.push(i);
-  }
-
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-rose-100 via-pink-50 to-red-100 p-6 relative overflow-hidden">
+    <div 
+      className="min-h-screen w-full bg-gradient-to-br from-rose-100 via-pink-50 to-red-100 relative overflow-auto"
+      onDoubleClick={toggleFullscreen}
+      title="Double-click để phóng to/thu nhỏ màn hình"
+    >
       {/* Animation hoa rơi */}
       <FallingPetals />
       
-      <div className="w-full max-w-[1600px] mx-auto relative z-10">
+      <div className="w-full max-w-[1400px] mx-auto px-6 py-12 relative z-10">
         
-        {/* Layout: Bên trái (Ảnh + Lời chúc) | Bên phải (Save The Date) */}
-        <div className="flex flex-row gap-6" style={{ display: 'flex' }}>
-          
-          {/* ===== CỘT TRÁI: ẢNH CƯỚI FULL ===== */}
-          <div 
-            style={{ width: '50%', height: '824px' }} 
-            className="relative rounded-2xl overflow-hidden flex-shrink-0 cursor-pointer"
-            onDoubleClick={toggleFullscreen}
-            title="Double-click để phóng to/thu nhỏ màn hình"
-          >
-            <img
-              src="/image_wedding/LIU_6305.png"
-              alt="Ảnh Cưới"
-              className="w-full h-full object-cover"
-            />
+        {/* Header */}
+        <div className="text-center mb-12 space-y-4">
+          <h1 className="font-serif text-6xl text-[#c9a87b] tracking-wide">
+            Văn Tùng <span className="text-red-500">❤️</span> Lương Lương
+          </h1>
+          <p className="text-2xl text-[#8b7355]">Lễ Hỏi Dâu - 30.01.2026</p>
+          <div className="text-lg text-[#8b7355] italic">
+            <p>Dù một vòng lần rơi vẫn gặp anh,</p>
+            <p>Từ đó, thế gian bỗng hóa dịu dàng.</p>
           </div>
+        </div>
 
-          {/* ===== CỘT PHẢI: SAVE THE DATE (Full height 800px) ===== */}
-          <div style={{ width: '50%', height: '824px' }} className="bg-gradient-to-b from-[#f5f0ea] to-white rounded-2xl flex flex-col justify-center items-center p-8 flex-shrink-0">
-            <div className="text-center space-y-8">
-              {/* Header */}
-              <h3 className="font-serif text-4xl text-[#c9a87b] tracking-[0.2em]">
-                LỄ HỎI DÂU
-              </h3>
-              
-              {/* Tên cô dâu chú rể */}
-              <div className="text-2xl font-medium text-[#c9a87b]">
-                Văn Tùng <span className="text-red-500">❤️</span> Lương Lương
-              </div>
+        {/* Gallery - Vertical scroll with animation */}
+        <div className="space-y-6">
+          {images.map((image, index) => (
+            <ImageItem key={image} src={image} index={index} />
+          ))}
+        </div>
 
-              {/* Quote */}
-              <div className="text-[#8b7355] text-lg">
-                <p>Dù một vòng lần rơi vẫn gặp anh,</p>
-                <p>Từ đó, thế gian bỗng hóa dịu dàng.</p>
-              </div>
-
-              {/* Calendar */}
-              <div className="bg-black p-6 rounded-lg inline-block">
-                <div className="bg-white/95 p-6 rounded-lg">
-                  {/* Month/Year Header */}
-                  <div className="text-center mb-4">
-                    <p className="text-2xl font-bold text-[#c9a87b]">
-                      Tháng 01 - 2026
-                    </p>
-                  </div>
-                  
-                  {/* Calendar Grid */}
-                  <div className="grid grid-cols-7 gap-2 text-center" style={{ width: '350px' }}>
-                    {/* Week days header */}
-                    {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'].map((d) => (
-                      <div key={d} className="text-sm font-semibold text-gray-600 py-2">
-                        {d}
-                      </div>
-                    ))}
-                    
-                    {/* Calendar days */}
-                    {calendarDays.map((dayNum, idx) => (
-                      <div key={idx} className="aspect-square flex items-center justify-center">
-                        {dayNum ? (
-                          <div
-                            className={`w-10 h-10 flex items-center justify-center text-lg ${
-                              dayNum === day
-                                ? 'bg-[#c9a87b] text-white font-bold rounded-full animate-pulse'
-                                : 'text-gray-700'
-                            }`}
-                          >
-                            {dayNum}
-                          </div>
-                        ) : null}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Date Info */}
-                <div className="text-center mt-4 space-y-2">
-                  <p className="font-serif text-[#c9a87b] text-2xl">
-                    {weddingInfo.dayOfWeek}, {weddingInfo.date}
-                  </p>
-                  <p className="text-[#c9a87b] text-lg">
-                    {weddingInfo.lunarDate}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Footer */}
+        <div className="text-center mt-12 py-8 border-t border-[#c9a87b]/30">
+          <p className="text-2xl font-serif text-[#c9a87b] mb-4">
+            Trăm năm hạnh phúc ❤️
+          </p>
+          <p className="text-[#8b7355]">
+            Nhằm ngày 12 tháng 12 năm Ất Tỵ
+          </p>
         </div>
 
       </div>
